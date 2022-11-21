@@ -1,5 +1,8 @@
 // * small
 @media screen and (max-width: 575px) {
+   .container {
+      padding: 4rem 0;
+   }
    .nav {
       padding: 0.7rem 0;
    }
@@ -46,6 +49,11 @@
    .tentang_karya-section {
       .tentang_karya {
          padding: 2.4rem 0;
+      }
+   }
+   .proses_box {
+      .box {
+         width: 100%;
       }
    }
 }
@@ -177,6 +185,7 @@
       }
    }
    .portofolio_porto-section {
+      padding: 2rem 0;
       .portofolio_porto {
          .portofolio_grid-porto {
             display: grid;
@@ -291,8 +300,8 @@
    }
 
    .kontak_kontak-section {
+      padding: 2rem 0;
       .kontak_kontak {
-         padding: 4rem 0;
          .kontak_head-kontak {
             .pertanyaan {
                display: flex;

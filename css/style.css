@@ -23,7 +23,6 @@ html {
   .container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    padding: 0.5rem 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -162,6 +161,9 @@ html {
   }
 }
 @media screen and (max-width: 575px) {
+  .container {
+    padding: 4rem 0;
+  }
   .nav {
     padding: 0.7rem 0;
   }
@@ -200,6 +202,9 @@ html {
   }
   .tentang_karya-section .tentang_karya {
     padding: 2.4rem 0;
+  }
+  .proses_box .box {
+    width: 100%;
   }
 }
 @media screen and (min-width: 767px) {
@@ -291,6 +296,9 @@ html {
   .proses_grid-proses .proses_booking-section {
     margin-top: 5rem;
   }
+  .portofolio_porto-section {
+    padding: 2rem 0;
+  }
   .portofolio_porto-section .portofolio_porto .portofolio_grid-porto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -375,8 +383,8 @@ html {
   .tentang_tentang-section .tentang_karya-section .tentang_karya {
     padding: 4rem 0;
   }
-  .kontak_kontak-section .kontak_kontak {
-    padding: 4rem 0;
+  .kontak_kontak-section {
+    padding: 2rem 0;
   }
   .kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan {
     display: flex;
@@ -702,7 +710,6 @@ footer .link {
   justify-content: center;
 }
 .proses_booking-section .proses_booking .proses_box .box {
-  width: 50%;
   border: 1rem solid var(--color-sect);
   padding: 2rem;
   border-radius: 4px;
@@ -764,7 +771,7 @@ footer .link {
   width: 100%;
 }
 .portofolio_porto-section .portofolio_porto {
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 }
 .portofolio_porto-section .portofolio_porto .portofolio_head-porto {
   text-align: center;
