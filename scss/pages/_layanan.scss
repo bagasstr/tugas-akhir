@@ -1,0 +1,114 @@
+.layanan_hero-section {
+   width: 100%;
+   .layanan_hero {
+      padding: 3rem 0;
+      .layanan_hero-grid {
+         .layanan_hero-head {
+            > h1 {
+               color: var(--color-sect);
+            }
+            > h2 {
+               font-size: 1rem;
+               color: var(--font1);
+               margin-bottom: 0.7rem;
+            }
+            > p {
+               font-weight: 400;
+            }
+         }
+         .layanan_image {
+            width: 100%;
+            > img {
+               border-radius: 4px;
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+.layanan_layanan-section {
+   width: 100%;
+   .layanan_layanan {
+      padding: 2rem 0;
+      .layanan_head {
+         > h1 {
+            color: var(--color-sect);
+            margin-bottom: 1rem;
+         }
+         > p {
+            margin-bottom: 1rem;
+         }
+      }
+      .layanan_grid {
+         display: grid;
+         .box {
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            img {
+               width: 80px;
+            }
+         }
+         .box:hover {
+            background-color: var(--bg-color);
+            h2 {
+               color: var(--color-sect);
+            }
+         }
+      }
+   }
+}
+
+.layanan_gallery-section {
+   width: 100%;
+   .layanan_gallery {
+      padding: 1rem 0;
+      .layanan_text-gallery {
+         > h1 {
+            font-size: 1.5rem;
+            color: var(--color-sect);
+            margin-bottom: 1rem;
+         }
+         > p {
+            margin-bottom: 1rem;
+         }
+      }
+      .layanan_image-gallery {
+         > img {
+            width: 100%;
+         }
+         > img:nth-child(2) {
+            margin: 1rem 0;
+         }
+      }
+      .layanan_button-gallery {
+         text-align: center;
+         margin: 1.4rem 0;
+         > i {
+            font-size: 1.3rem;
+            color: var(--font1);
+         }
+         h5 {
+            > a {
+               color: var(--font1);
+            }
+         }
+      }
+   }
+}
+
+footer {
+   margin-top: 4rem;
+   text-align: center;
+   padding: 1rem 0;
+   background-color: var(--color-sect);
+   .copy {
+      color: var(--font2);
+      font-weight: 300;
+      font-size: 0.9;
+   }
+   .link {
+      color: var(--font2);
+   }
+}

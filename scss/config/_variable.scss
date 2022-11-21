@@ -1,0 +1,33 @@
+// * Variable
+// color
+:root {
+   --color-sect: #eb6440;
+   --bg-color: #eff5f5;
+   --font1: #497174;
+   --font2: #d6e4e5;
+   --color-accent: rgb(74, 73, 82);
+   // size desktop
+   $ph-d: 0 4rem;
+   $pv-d: 5rem 0;
+
+   $h1-d: 2.8rem;
+   $h2-d: 2rem;
+   $h3-d: 1.8rem;
+   $h4-d: 1rem;
+   // size tablet
+   $ph-t: 0 2.2rem;
+   $pv-t: 4rem 0;
+
+   $h1-t: 2.5rem;
+   $h2-t: 1.7rem;
+   $h3-t: 1.5rem;
+   $h4-t: 0.8rem;
+   // size mobile
+   $ph-m: 0 1.4rem;
+   $pv-m: 3rem 0;
+
+   $h1-m: 2rem;
+   $h2-m: 1.4rem;
+   $h3-m: 1rem;
+   $h4-m: 0.4rem;
+}

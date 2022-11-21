@@ -1,0 +1,900 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.4rem;
+}
+
+:root {
+  --color-sect: #eb6440;
+  --bg-color: #eff5f5;
+  --font1: #497174;
+  --font2: #d6e4e5;
+  --color-accent: rgb(74, 73, 82);
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: var(--color-sect);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_item {
+  position: relative;
+}
+.nav_item:hover .nav_link::before {
+  content: "";
+  position: absolute;
+  background-color: var(--font2);
+  height: 2px;
+  border-radius: 10px;
+  width: 100%;
+  bottom: -1px;
+}
+.nav_item:hover .nav_link {
+  color: var(--font2);
+}
+.nav_link, .nav_logo, .nav_toggle {
+  color: var(--bg-color);
+  font-weight: 500;
+}
+.nav_toggle:hover {
+  cursor: pointer;
+}
+.nav_toggle:hover .fa {
+  color: var(--font2);
+}
+.nav_toggle:hover .fa-solid {
+  color: var(--font2);
+}
+.nav_logo {
+  font-size: 1.2rem;
+}
+.nav .home_toggle,
+.nav .home_logos {
+  color: var(--bg-color);
+}
+
+.show-menus {
+  top: 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav_menu {
+    position: fixed;
+    background-color: var(--color-accent);
+    padding: 2.5rem 0;
+    width: 90%;
+    z-index: -5;
+    border-radius: 5px;
+    margin: 0 auto;
+    top: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .nav_menu .close {
+    width: 100%;
+    text-align: right;
+  }
+  .nav_menu .close .fa-solid {
+    color: var(--font1);
+    font-size: 1.3rem;
+  }
+  .nav_menu .nav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.5rem;
+  }
+  .nav #toggle-open {
+    display: block;
+  }
+  .nav #toggle-close {
+    display: none;
+  }
+  .nav_menu .nav_list .nav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+  }
+  .show-menus {
+    top: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav_menu > .nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .nav #toggle-open {
+    display: none;
+  }
+  .nav #toggle-close {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .nav {
+    padding: 0.7rem 0;
+  }
+  #home {
+    padding: 4rem 0;
+  }
+  #home .home_hero > h1 {
+    font-size: 18px;
+  }
+  .home_text-layanan > h1 {
+    font-size: 1.5rem;
+  }
+  .home_grid2-layanan {
+    display: flex;
+    margin: 4rem 0;
+    flex-direction: column-reverse;
+  }
+  .layanan_hero-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .proses_hero > h3 {
+    font-size: 14px;
+  }
+  .proses_hero > h1 {
+    font-size: 18px;
+  }
+  .tentang_image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .tentang_image > img {
+    width: 100%;
+  }
+  .tentang_karya-section .tentang_karya {
+    padding: 2.4rem 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .nav {
+    padding: 1rem 0;
+  }
+  .home_text-agency > h1 {
+    font-size: 24px;
+  }
+  .home_grid-agency {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .home_image-agency {
+    width: 100%;
+  }
+  .home_image-agency > img {
+    width: 100%;
+  }
+  .home_text-layanan > h1 {
+    font-size: 1.5rem;
+  }
+  .home_grid1-layanan,
+  .home_grid2-layanan,
+  .home_grid3-layanan {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 2rem;
+  }
+  .home_grid1-layanan .text > p,
+  .home_grid2-layanan .text > p,
+  .home_grid3-layanan .text > p {
+    font-size: 14px;
+  }
+  .home_grid1-layanan .text > h3,
+  .home_grid2-layanan .text > h3,
+  .home_grid3-layanan .text > h3 {
+    margin-bottom: 1rem;
+  }
+  .home_grid3-layanan .text > h3 {
+    font-size: 16px;
+  }
+  .home_image-gallery,
+  .layanan_image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .layanan_hero-section {
+    padding: 3rem 0;
+  }
+  .layanan_hero-section .layanan_hero > .layanan_hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+  .layanan_hero-section .layanan_hero .layanan_hero-head {
+    text-align: right;
+  }
+  .layanan_grid {
+    row-gap: 1rem;
+  }
+  .proses_hero-section {
+    padding: 3rem 0;
+  }
+  .proses_hero-section .proses_hero > h3 {
+    font-size: 20px;
+  }
+  .proses_hero-section .proses_hero > h1 {
+    font-size: 24px;
+  }
+  .proses_grid-proses {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+  .proses_grid-proses .grids > .parag {
+    margin-top: 1rem;
+  }
+  .proses_grid-proses .grids > .parag > p {
+    font-size: 15px;
+  }
+  .proses_grid-proses .grid3 > i {
+    height: 38px;
+  }
+  .proses_grid-proses .proses_booking-section {
+    margin-top: 5rem;
+  }
+  .portofolio_porto-section .portofolio_porto .portofolio_grid-porto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav {
+    padding: 1rem 0;
+  }
+  #home {
+    padding: 4rem 0;
+  }
+  #home .home_hero > h1 {
+    font-size: 32px;
+  }
+  .home_agency-section {
+    padding: 4rem 0;
+  }
+  .home_agency-section .home_grid-agency .home_text-agency > h1 {
+    font-size: 32px;
+  }
+  .home_layanan-section .home_layanan {
+    padding: 4rem 0;
+  }
+  .home_layanan-section .home_layanan .home_text-layanan > h1 {
+    font-size: 2rem;
+    color: var(--color-sect);
+    margin-bottom: 1rem;
+  }
+  .home_grid1-layanan > .image,
+  .home_grid2-layanan > .image,
+  .home_grid3-layanan > .image {
+    width: 100px;
+  }
+  .home_grid1-layanan > .image img,
+  .home_grid2-layanan > .image img,
+  .home_grid3-layanan > .image img {
+    width: 100%;
+  }
+  .home_grid2-layanan > .text {
+    text-align: right;
+  }
+  .proses_booking-section {
+    padding: 4rem 0;
+  }
+  .proses_booking-section .proses_hero-section {
+    padding: 5rem 0;
+  }
+  .proses_booking-section .proses_hero-section .proses_box {
+    padding: 0 5rem;
+  }
+  .proses_booking-section .proses_hero-section .proses_box .box {
+    border: 10px solid var(--color-sect);
+    padding: 0 10px;
+  }
+  .proses_booking-section .proses_hero-section .proses_box .box .box-content {
+    padding: 0 4rem;
+  }
+  .portofolio_porto-section .portofolio_porto .portofolio_grid-porto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+  .tentang_tentang-section {
+    padding: 4rem 0;
+  }
+  .tentang_tentang-section .tentang_tentang .tentang_head-tentang {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 1rem;
+  }
+  .tentang_tentang-section .tentang_tentang .tentang_head-tentang .tentang_image {
+    width: 300px;
+  }
+  .tentang_tentang-section .tentang_tentang .tentang_head-tentang .tentang_image > img {
+    border-radius: 4px;
+    width: 100%;
+  }
+  .tentang_tentang-section .tentang_karya-section .tentang_karya {
+    padding: 4rem 0;
+  }
+  .kontak_kontak-section .kontak_kontak {
+    padding: 4rem 0;
+  }
+  .kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan {
+    display: flex;
+    justify-content: center;
+  }
+  .kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan .box {
+    border: 1rem solid var(--color-sect);
+    padding: 2rem;
+    border-radius: 4px;
+    width: 50%;
+  }
+}
+#home {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(3, 3, 3, 0.651), rgba(3, 3, 3, 0.651)), url(/img/hero.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+}
+#home .home_hero {
+  padding: 6rem 0;
+  text-align: center;
+}
+#home .home_hero > h1 {
+  color: var(--color-sect);
+}
+#home .home_hero > p {
+  color: var(--font2);
+}
+
+.home_agency-section {
+  width: 100%;
+}
+.home_agency-section .home_agency {
+  padding: 2rem 0;
+}
+.home_agency-section .home_agency .home_grid-agency .home_text-agency {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.home_agency-section .home_agency .home_grid-agency .home_text-agency > h1 {
+  color: var(--color-sect);
+  margin-bottom: 1rem;
+}
+.home_agency-section .home_agency .home_grid-agency .home_text-agency > p {
+  font-size: 0.9rem;
+}
+.home_agency-section .home_agency .home_image-agency {
+  width: 100%;
+}
+.home_agency-section .home_agency .home_image-agency > img {
+  width: 100%;
+}
+
+.home_layanan-section {
+  width: 100%;
+}
+.home_layanan-section .home_layanan {
+  padding: 2rem 0;
+}
+.home_layanan-section .home_layanan .home_text-layanan > h1 {
+  color: var(--color-sect);
+  margin-bottom: 1rem;
+}
+.home_layanan-section .home_layanan .home_text-layanan > h2 {
+  color: var(--font1);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.home_layanan-section .home_layanan .home_text-layanan > p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.home_layanan-section .home_layanan .home_grid1-layanan,
+.home_layanan-section .home_layanan .home_grid2-layanan,
+.home_layanan-section .home_layanan .home_grid3-layanan {
+  margin: 4rem 0;
+}
+.home_layanan-section .home_layanan .home_grid1-layanan > .image,
+.home_layanan-section .home_layanan .home_grid2-layanan > .image,
+.home_layanan-section .home_layanan .home_grid3-layanan > .image {
+  width: 100%;
+}
+.home_layanan-section .home_layanan .home_grid1-layanan > .image img,
+.home_layanan-section .home_layanan .home_grid2-layanan > .image img,
+.home_layanan-section .home_layanan .home_grid3-layanan > .image img {
+  width: 100%;
+}
+.home_layanan-section .home_layanan .home_grid1-layanan > .text > h2,
+.home_layanan-section .home_layanan .home_grid2-layanan > .text > h2,
+.home_layanan-section .home_layanan .home_grid3-layanan > .text > h2 {
+  color: var(--color-sect);
+}
+.home_layanan-section .home_layanan .home_grid1-layanan > .text > h3,
+.home_layanan-section .home_layanan .home_grid2-layanan > .text > h3,
+.home_layanan-section .home_layanan .home_grid3-layanan > .text > h3 {
+  color: var(--font1);
+}
+.home_layanan-section .home_layanan .home_grid2-layanan > .text > h2 {
+  color: var(--color-sect);
+}
+.home_layanan-section .home_layanan .home_grid2-layanan > .text > h3 {
+  color: var(--font1);
+}
+.home_layanan-section .home_layanan .home_grid3-layanan {
+  margin: 4rem 0;
+}
+.home_layanan-section .home_layanan .home_grid3-layanan > .text > h2 {
+  color: var(--color-sect);
+}
+.home_layanan-section .home_layanan .home_grid3-layanan > .text > h3 {
+  color: var(--font1);
+}
+
+.home_gallery-section {
+  width: 100%;
+}
+.home_gallery-section .home_gallery {
+  padding: 1rem 0;
+}
+.home_gallery-section .home_gallery .home_text-gallery > h1 {
+  font-size: 1.5rem;
+  color: var(--color-sect);
+  margin-bottom: 1rem;
+}
+.home_gallery-section .home_gallery .home_text-gallery > p {
+  margin-bottom: 1rem;
+}
+.home_gallery-section .home_gallery .home_image-gallery > img {
+  width: 100%;
+}
+.home_gallery-section .home_gallery .home_image-gallery > img:nth-child(2) {
+  margin: 1rem 0;
+}
+.home_gallery-section .home_gallery .home_button-gallery {
+  text-align: center;
+  margin: 1.4rem 0;
+}
+.home_gallery-section .home_gallery .home_button-gallery > i {
+  font-size: 1.3rem;
+  color: var(--font1);
+}
+.home_gallery-section .home_gallery .home_button-gallery h5 > a {
+  color: var(--font1);
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--color-sect);
+}
+footer .copy {
+  color: var(--font2);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+footer .link {
+  color: var(--font2);
+}
+
+.layanan_hero-section {
+  width: 100%;
+}
+.layanan_hero-section .layanan_hero {
+  padding: 3rem 0;
+}
+.layanan_hero-section .layanan_hero .layanan_hero-grid .layanan_hero-head > h1 {
+  color: var(--color-sect);
+}
+.layanan_hero-section .layanan_hero .layanan_hero-grid .layanan_hero-head > h2 {
+  font-size: 1rem;
+  color: var(--font1);
+  margin-bottom: 0.7rem;
+}
+.layanan_hero-section .layanan_hero .layanan_hero-grid .layanan_hero-head > p {
+  font-weight: 400;
+}
+.layanan_hero-section .layanan_hero .layanan_hero-grid .layanan_image {
+  width: 100%;
+}
+.layanan_hero-section .layanan_hero .layanan_hero-grid .layanan_image > img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.layanan_layanan-section {
+  width: 100%;
+}
+.layanan_layanan-section .layanan_layanan {
+  padding: 2rem 0;
+}
+.layanan_layanan-section .layanan_layanan .layanan_head > h1 {
+  color: var(--color-sect);
+  margin-bottom: 1rem;
+}
+.layanan_layanan-section .layanan_layanan .layanan_head > p {
+  margin-bottom: 1rem;
+}
+.layanan_layanan-section .layanan_layanan .layanan_grid {
+  display: grid;
+}
+.layanan_layanan-section .layanan_layanan .layanan_grid .box {
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.layanan_layanan-section .layanan_layanan .layanan_grid .box img {
+  width: 80px;
+}
+.layanan_layanan-section .layanan_layanan .layanan_grid .box:hover {
+  background-color: var(--bg-color);
+}
+.layanan_layanan-section .layanan_layanan .layanan_grid .box:hover h2 {
+  color: var(--color-sect);
+}
+
+.layanan_gallery-section {
+  width: 100%;
+}
+.layanan_gallery-section .layanan_gallery {
+  padding: 1rem 0;
+}
+.layanan_gallery-section .layanan_gallery .layanan_text-gallery > h1 {
+  font-size: 1.5rem;
+  color: var(--color-sect);
+  margin-bottom: 1rem;
+}
+.layanan_gallery-section .layanan_gallery .layanan_text-gallery > p {
+  margin-bottom: 1rem;
+}
+.layanan_gallery-section .layanan_gallery .layanan_image-gallery > img {
+  width: 100%;
+}
+.layanan_gallery-section .layanan_gallery .layanan_image-gallery > img:nth-child(2) {
+  margin: 1rem 0;
+}
+.layanan_gallery-section .layanan_gallery .layanan_button-gallery {
+  text-align: center;
+  margin: 1.4rem 0;
+}
+.layanan_gallery-section .layanan_gallery .layanan_button-gallery > i {
+  font-size: 1.3rem;
+  color: var(--font1);
+}
+.layanan_gallery-section .layanan_gallery .layanan_button-gallery h5 > a {
+  color: var(--font1);
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--color-sect);
+}
+footer .copy {
+  color: var(--font2);
+  font-weight: 300;
+  font-size: 0.9;
+}
+footer .link {
+  color: var(--font2);
+}
+
+.proses_hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.534), rgba(0, 0, 0, 0.534)), url(/img/hero-proses.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.proses_hero-section .proses_hero {
+  padding: 2rem 0;
+  padding-top: 3rem;
+  text-align: center;
+}
+.proses_hero-section .proses_hero > h3 {
+  color: var(--color-sect);
+}
+.proses_hero-section .proses_hero > h1 {
+  color: var(--font2);
+}
+
+.proses_proses-section {
+  width: 100%;
+}
+.proses_proses-section .proses_proses {
+  padding: 2rem 0;
+}
+.proses_proses-section .proses_proses .proses_head-proses {
+  margin-bottom: 1rem;
+}
+.proses_proses-section .proses_proses .proses_head-proses > h2 {
+  color: var(--color-sect);
+}
+.proses_proses-section .proses_proses .proses_grid-proses .grids {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  align-items: stretch;
+}
+.proses_proses-section .proses_proses .proses_grid-proses .grids > i {
+  font-size: 38px;
+  color: var(--font1);
+}
+.proses_proses-section .proses_proses .proses_grid-proses .grids .parag > p {
+  color: var(--font1);
+}
+
+.proses_booking-section {
+  width: 100%;
+}
+.proses_booking-section .proses_booking {
+  padding: 1rem 0;
+}
+.proses_booking-section .proses_booking .proses_head-booking {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.proses_booking-section .proses_booking .proses_head-booking > h2 {
+  color: var(--color-sect);
+}
+.proses_booking-section .proses_booking .proses_box {
+  display: flex;
+  justify-content: center;
+}
+.proses_booking-section .proses_booking .proses_box .box {
+  width: 50%;
+  border: 1rem solid var(--color-sect);
+  padding: 2rem;
+  border-radius: 4px;
+}
+.proses_booking-section .proses_booking .proses_box .box .box-content {
+  text-align: center;
+}
+.proses_booking-section .proses_booking .proses_box .box .box-content > img {
+  width: 100px;
+}
+.proses_booking-section .proses_booking .proses_box .box .box-content > h3 {
+  color: var(--color-sect);
+}
+.proses_booking-section .proses_booking .proses_box .box .box-content > p {
+  font-size: 18px;
+  font-weight: normal;
+}
+.proses_booking-section .proses_booking .proses_box .box > form {
+  margin-top: 1rem;
+}
+.proses_booking-section .proses_booking .proses_box .box > form label {
+  font-weight: 400;
+}
+.proses_booking-section .proses_booking .proses_box .box > form > #input {
+  width: 100%;
+  height: 1.8rem;
+  border: 2px solid var(--color-sect);
+  border-radius: 3px;
+}
+.proses_booking-section .proses_booking .proses_box .box .btn {
+  margin-top: 1rem;
+}
+.proses_booking-section .proses_booking .proses_box .box .btn #button {
+  border: none;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--color-sect);
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--color-sect);
+}
+footer .copy {
+  color: var(--font2);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+footer .link {
+  color: var(--font2);
+}
+
+.portofolio_porto-section {
+  width: 100%;
+}
+.portofolio_porto-section .portofolio_porto {
+  padding: 2.5rem 0;
+}
+.portofolio_porto-section .portofolio_porto .portofolio_head-porto {
+  text-align: center;
+}
+.portofolio_porto-section .portofolio_porto .portofolio_head-porto > h1 {
+  color: var(--color-sect);
+}
+.portofolio_porto-section .portofolio_porto .portofolio_grid-porto {
+  margin-top: 2rem;
+}
+.portofolio_porto-section .portofolio_porto .portofolio_grid-porto > img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 0.4rem 0;
+}
+
+.tentang_tentang-section {
+  width: 100%;
+  height: 100vh;
+}
+.tentang_tentang-section .tentang_tentang {
+  padding: 2.5rem 0;
+}
+.tentang_tentang-section .tentang_tentang .tentang_head-tentang .tentang_text > h1 {
+  color: var(--color-sect);
+}
+
+.tentang_karya-section {
+  width: 100%;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kiri {
+  margin-bottom: 2rem;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kiri > h2 {
+  color: var(--color-sect);
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .img {
+  padding: 1rem;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .img img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .img > p {
+  font-weight: 600;
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .expert {
+  border-right: 1px solid var(--font2);
+  border-bottom: 1px solid var(--font2);
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .client {
+  border-left: 1px solid var(--font2);
+  border-bottom: 1px solid var(--font2);
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .project {
+  border-right: 1px solid var(--font2);
+  border-top: 1px solid var(--font2);
+}
+.tentang_karya-section .tentang_karya .tentang_head-karya .kanan .campaign {
+  border-left: 1px solid var(--font2);
+  border-top: 1px solid var(--font2);
+}
+
+.kontak_kontak-section {
+  width: 100%;
+}
+.kontak_kontak-section .kontak_kontak {
+  padding: 4rem 0;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .kiri {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .kiri .heading > h1 {
+  color: var(--color-sect);
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .kiri .parg a {
+  color: var(--color-sect);
+  font-weight: 500;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan {
+  margin-top: 2rem;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan .box .button {
+  text-align: center;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan .box .button button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-sect);
+  border-radius: 3px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  color: var(--bg-color);
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form .firstName,
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form .lastName {
+  margin-bottom: 1rem;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form .email,
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form .ket {
+  margin-bottom: 1rem;
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 3px;
+  padding: 0.7rem;
+  outline: none !important;
+  border: 2px solid var(--font1);
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form input:focus {
+  outline: none;
+  border: 2px solid var(--color-sect);
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form textarea {
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid var(--font1);
+}
+.kontak_kontak-section .kontak_kontak .kontak_head-kontak .pertanyaan form textarea:focus {
+  outline: none;
+  border: 2px solid var(--color-sect);
+}
+
+/*# sourceMappingURL=style.css.map */

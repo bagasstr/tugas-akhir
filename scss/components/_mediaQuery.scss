@@ -1,0 +1,310 @@
+// * small
+@media screen and (max-width: 575px) {
+   .nav {
+      padding: 0.7rem 0;
+   }
+   #home {
+      padding: 4rem 0;
+      .home_hero {
+         > h1 {
+            font-size: 18px;
+         }
+      }
+   }
+   .home_text-layanan {
+      > h1 {
+         font-size: 1.5rem;
+      }
+   }
+   .home_grid2-layanan {
+      display: flex;
+      margin: 4rem 0;
+      flex-direction: column-reverse;
+   }
+   .layanan_hero-grid {
+      display: flex;
+      flex-direction: column-reverse;
+   }
+
+   .proses_hero {
+      > h3 {
+         font-size: 14px;
+      }
+      > h1 {
+         font-size: 18px;
+      }
+   }
+   .tentang_image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      > img {
+         width: 100%;
+      }
+   }
+   .tentang_karya-section {
+      .tentang_karya {
+         padding: 2.4rem 0;
+      }
+   }
+}
+
+// * medium
+@media screen and (min-width: 767px) {
+   //    .container {
+   //       margin-right: 2rem;
+   //       margin-left: 2rem;
+   //    }
+   .nav {
+      padding: 1rem 0;
+   }
+   .home_text-agency {
+      > h1 {
+         font-size: 24px;
+      }
+   }
+   .home_grid-agency {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: 2rem;
+   }
+   .home_image-agency {
+      width: 100%;
+      > img {
+         width: 100%;
+      }
+   }
+   .home_text-layanan {
+      > h1 {
+         font-size: 1.5rem;
+      }
+   }
+
+   .home_grid1-layanan,
+   .home_grid2-layanan,
+   .home_grid3-layanan {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 2rem;
+      .text {
+         > p {
+            font-size: 14px;
+         }
+         > h3 {
+            margin-bottom: 1rem;
+         }
+      }
+   }
+   .home_grid3-layanan {
+      .text {
+         > h3 {
+            font-size: 16px;
+         }
+      }
+   }
+   .home_image-gallery,
+   .layanan_image-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+   }
+
+   .layanan_hero-section {
+      padding: 3rem 0;
+      .layanan_hero {
+         > .layanan_hero-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+         }
+         .layanan_hero-head {
+            text-align: right;
+         }
+      }
+   }
+   .layanan_grid {
+      row-gap: 1rem;
+   }
+   .proses_hero-section {
+      padding: 3rem 0;
+      .proses_hero {
+         > h3 {
+            font-size: 20px;
+         }
+         > h1 {
+            font-size: 24px;
+         }
+      }
+   }
+   .proses_grid-proses {
+      //   display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+      //   justify-content: center;
+      //   .grid {
+      //      height: auto;
+      //   }
+      .grids {
+         > .parag {
+            margin-top: 1rem;
+            > p {
+               font-size: 15px;
+            }
+         }
+      }
+      //   .grid1 {
+      //      > .parag {
+      //         margin-top: 0.5rem;
+      //      }
+      //   }
+      //   .grid2 {
+      //      > .parag {
+      //         margin-top: -1.3rem;
+      //      }
+      //   }
+      .grid3 {
+         > i {
+            height: 38px;
+         }
+      }
+
+      .proses_booking-section {
+         margin-top: 5rem;
+      }
+   }
+   .portofolio_porto-section {
+      .portofolio_porto {
+         .portofolio_grid-porto {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 2rem;
+            gap: 1rem;
+         }
+      }
+   }
+}
+// * large
+
+@media screen and (min-width: 1024px) {
+   .nav {
+      padding: 1rem 0;
+   }
+   #home {
+      padding: 4rem 0;
+      .home_hero {
+         > h1 {
+            font-size: 32px;
+         }
+      }
+   }
+   .home_agency-section {
+      padding: 4rem 0;
+      .home_grid-agency {
+         .home_text-agency {
+            > h1 {
+               font-size: 32px;
+            }
+         }
+      }
+   }
+   .home_layanan-section {
+      .home_layanan {
+         padding: 4rem 0;
+         .home_text-layanan {
+            > h1 {
+               font-size: 2rem;
+               color: var(--color-sect);
+               margin-bottom: 1rem;
+            }
+         }
+      }
+   }
+   .home_grid1-layanan,
+   .home_grid2-layanan,
+   .home_grid3-layanan {
+      > .image {
+         width: 100px;
+         img {
+            width: 100%;
+         }
+      }
+   }
+   .home_grid2-layanan {
+      > .text {
+         text-align: right;
+      }
+   }
+   .proses_booking-section {
+      padding: 4rem 0;
+      .proses_hero-section {
+         padding: 5rem 0;
+         .proses_box {
+            padding: 0 5rem;
+            .box {
+               border: 10px solid var(--color-sect);
+               padding: 0 10px;
+               .box-content {
+                  padding: 0 4rem;
+               }
+            }
+         }
+      }
+   }
+
+   .portofolio_porto-section {
+      .portofolio_porto {
+         .portofolio_grid-porto {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 2rem;
+            gap: 1rem;
+         }
+      }
+   }
+   .tentang_tentang-section {
+      padding: 4rem 0;
+      .tentang_tentang {
+         .tentang_head-tentang {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            column-gap: 1rem;
+            .tentang_image {
+               width: 300px;
+               //    height: 150px;
+               > img {
+                  border-radius: 4px;
+                  width: 100%;
+               }
+            }
+         }
+      }
+
+      .tentang_karya-section {
+         .tentang_karya {
+            padding: 4rem 0;
+         }
+      }
+   }
+
+   .kontak_kontak-section {
+      .kontak_kontak {
+         padding: 4rem 0;
+         .kontak_head-kontak {
+            .pertanyaan {
+               display: flex;
+               justify-content: center;
+               .box {
+                  border: 1rem solid var(--color-sect);
+                  padding: 2rem;
+                  border-radius: 4px;
+                  width: 50%;
+               }
+            }
+         }
+      }
+   }
+}

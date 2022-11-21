@@ -1,0 +1,20 @@
+.portofolio_porto-section {
+   width: 100%;
+   .portofolio_porto {
+      padding: 2.5rem 0;
+      .portofolio_head-porto {
+         text-align: center;
+         > h1 {
+            color: var(--color-sect);
+         }
+      }
+      .portofolio_grid-porto {
+         margin-top: 2rem;
+         > img {
+            width: 100%;
+            border-radius: 4px;
+            margin: 0.4rem 0;
+         }
+      }
+   }
+}

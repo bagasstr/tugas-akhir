@@ -1,0 +1,71 @@
+.kontak_kontak-section {
+   width: 100%;
+   .kontak_kontak {
+      padding: 4rem 0;
+      .kontak_head-kontak {
+         .kiri {
+            text-align: center;
+            margin-bottom: 1rem;
+            .heading {
+               > h1 {
+                  color: var(--color-sect);
+               }
+            }
+            .parg {
+               a {
+                  color: var(--color-sect);
+                  font-weight: 500;
+               }
+            }
+         }
+         .pertanyaan {
+            margin-top: 2rem;
+            .box {
+               .button {
+                  text-align: center;
+                  button {
+                     border: none;
+                     cursor: pointer;
+                     background-color: var(--color-sect);
+                     border-radius: 3px;
+                     padding: 0.6rem 1rem;
+                     width: 100%;
+                     color: var(--bg-color);
+                  }
+               }
+            }
+            form {
+               .firstName,
+               .lastName {
+                  margin-bottom: 1rem;
+               }
+               .email,
+               .ket {
+                  margin-bottom: 1rem;
+               }
+               input {
+                  width: 100%;
+                  height: 2rem;
+                  border-radius: 3px;
+                  padding: 0.7rem;
+                  outline: none !important;
+                  border: 2px solid var(--font1);
+               }
+               input:focus {
+                  outline: none;
+                  border: 2px solid var(--color-sect);
+               }
+               textarea {
+                  width: 100%;
+                  border-radius: 3px;
+                  border: 2px solid var(--font1);
+               }
+               textarea:focus {
+                  outline: none;
+                  border: 2px solid var(--color-sect);
+               }
+            }
+         }
+      }
+   }
+}
